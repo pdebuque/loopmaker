@@ -13,6 +13,7 @@ const Measure: React.FC<Props> = (props) => {
 
   return (
     <div className='measure'>
+      <div className = 'barline'>|</div>
       {measure.map((beat, i) => {
         return <Beat key={i} beat={beat} />
       })}

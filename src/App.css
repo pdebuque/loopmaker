@@ -10,12 +10,21 @@
 
 .measure {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: .5fr repeat(4, 1fr);
+}
+
+.barline{
+  width: 100%;
+  text-align: center;
 }
 
 .beat {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.note {
+  width: 1rem;
 }
 
 .note-btn {

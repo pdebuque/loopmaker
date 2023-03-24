@@ -1,13 +1,21 @@
 import React from 'react';
 import Beat from './Beat';
 
-const Measure = () => {
+import type { MeasureT } from '../model'
+
+interface Props {
+  measure: MeasureT
+}
+
+const Measure: React.FC<Props> = (props) => {
+
+  const { measure } = props
+
   return (
     <div className='measure'>
-      <Beat />
-      <Beat />
-      <Beat />
-      <Beat />
+      {measure.map((beat, i) => {
+        return <Beat key={i} beat={beat} />
+      })}
     </div>
   )
 }

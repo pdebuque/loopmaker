@@ -14,8 +14,6 @@ const Note: React.FC<Props> = (props) => {
   const { note } = props;
   const dispatch = useAppDispatch()
 
-
-
   const handleClick = ()=>{
     console.log('clicked note #', note.id);
     dispatch(toggleNoteActive(note.id))
